@@ -15,16 +15,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
     <!--mon css-->
-    <link rel="stylesheet" href="../assets/style.css" type="text/css">
+    <link rel="stylesheet" href="{{asset('style.css')}}" type="text/css">
 
     <title>Tendance mangashop</title>
 </head>
 <body>
 
     <!-- Header --> 
+    <!-- Header --> 
     <nav class="navbar navbar-expand-lg color-orange bg-body-tertiary">
         <div class="container-fluid my-2">
-            <a class="navbar-brand fw-bold rounded-pill p-1 logo-pc" href="../index.html">Mangashop</a>
+            <a class="navbar-brand fw-bold rounded-pill p-1 logo-pc" href="{{url('/index')}}">Mangashop</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,11 +34,11 @@
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn color-blue btn-outline-light me-2" type="submit">Search</button>
                 </form>
-                <a class="mx-3 d-flex" href="panier.html">
-                    <img class="panier" src="../assets/image/shopping-bag-black-silhouette.png">
+                <a class="mx-3 d-flex" href="{{url('/panier')}}">
+                    <img class="panier" src="{{ asset('image/shopping-bag-black-silhouette.png')}}">
                 </a>
-                <a class="mx-3 d-flex" href="profil.html">
-                    <img class="profil" src="../assets\image\man.png">
+                <a class="mx-3 d-flex" href="{{url('/panier')}}">
+                    <img class="profil" src="{{ asset('image\man.png')}}">
                 </a>
             </div>
         </div>
@@ -46,13 +47,13 @@
         <div class="container justify-content-center">
             <ul class="navbar-nav">
                 <li class="nav-item pt-sm-1">
-                    <a class="nav-link h6 fw-bold" href="#">Catégorie</a>
+                    <a class="nav-link h6 fw-bold" href="{{ url('/categorie')}}">Catégorie</a>
                 </li>
                 <li class="nav-item pt-sm-1">
-                    <a class="nav-link h6 fw-bold" href="tendance.html">Tendances</a>
+                    <a class="nav-link h6 fw-bold" href="{{ url('/tendance')}}">Tendances</a>
                 </li>
                 <li class="nav-item dropdown pt-sm-1">
-                    <a class="nav-link h6 fw-bold dropdown-toggle" href="#" data-bs-toggle="dropdown">Merchandising</a>
+                    <a class="nav-link h6 fw-bold dropdown-toggle" href="{{ url('/merchandising')}}" data-bs-toggle="dropdown">Merchandising</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">T-shirts</a></li>
                         <li><a class="dropdown-item" href="#">Sweat-shirts</a></li>
@@ -89,17 +90,17 @@
                 <div class="row">
                     <div class="col">
                         <div class="card border border-1 border-dark">
-                            <img src="../assets/image/hiromya.jpg" class="card-img-top border" alt="hiromya">
+                            <img src="{{asset('image/cover 1.jpg')}}" class="card-img-top border" alt="mha tome 33">
                           
                             <div class="card-body">
-                              <h5 class="card-title">Hiromya Tome 1</h5>
-                              <a href="#" class="btn btn-primary">Voir plus</a>
+                              <h5 class="card-title">my hero academia tome 35</h5>
+                              <a href="{{url('/article')}}" class="btn btn-primary">Voir plus</a>
                             </div>
                         </div>  
                     </div>
                     <div class="col">
                         <div class="card border border-1 border-dark">
-                            <img src="../assets/image/cover 2.jpg" class="card-img-top border" alt="vigilente mha tome 14">
+                            <img src="{{asset('image/cover 2.jpg')}}" class="card-img-top border" alt="vigilente mha tome 14">
                           
                             <div class="card-body">
                               <h5 class="card-title">Vigilente my hero academia tome 14</h5>
@@ -109,7 +110,7 @@
                     </div>
                     <div class="col">
                         <div class="card border border-1 border-dark">
-                            <img src="../assets/image/cover 3.jpg" class="card-img-top border" alt="boruto">
+                            <img src="{{asset('image/cover 3.jpg')}}" class="card-img-top border" alt="boruto">
                           
                             <div class="card-body">
                               <h5 class="card-title">Boruto naruto next generation tome 16</h5>
@@ -120,7 +121,7 @@
                     <!--responsive tablet-->
                     <div class="col">
                         <div class="card border border-1 border-dark">
-                            <img src="../assets/image/cover 1.jpg" class="card-img-top border" alt="mha tome 33">
+                            <img src="{{asset('image/cover 1.jpg')}}" class="card-img-top border" alt="mha tome 33">
                           
                             <div class="card-body">
                               <h5 class="card-title">my hero academia tome 35</h5>
@@ -131,7 +132,7 @@
                     <!--responsive pc-->
                     <div class="col">
                         <div class="card border border-1 border-dark">
-                            <img src="../assets/image/cover 2.jpg" class="card-img-top border" alt="vigilente mha tome 14">
+                            <img src="{{asset('image/cover 2.jpg')}}" class="card-img-top border" alt="vigilente mha tome 14">
                           
                             <div class="card-body">
                               <h5 class="card-title">Vigilente my hero academia tome 14</h5>
@@ -141,7 +142,7 @@
                     </div>
                     <div class="col">
                         <div class="card border border-1 border-dark">
-                            <img src="../assets/image/cover 3.jpg" class="card-img-top border" alt="boruto">
+                            <img src="{{asset('image/cover 3.jpg')}}" class="card-img-top border" alt="boruto">
                           
                             <div class="card-body">
                               <h5 class="card-title">Boruto naruto next generation tome 16</h5>
@@ -165,7 +166,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="card border border-1 border-dark">
-                            <img src="../assets/image/cover 4.jpg" class="card-img-top border" alt="hiromia">
+                            <img src="{{asset('image/cover 4.jpg')}}" class="card-img-top border" alt="hiromia">
                           
                             <div class="card-body">
                               <h5 class="card-title">Hiromia tome 8</h5><br>
@@ -175,7 +176,7 @@
                     </div>
                     <div class="col">
                         <div class="card border border-1 border-dark">
-                            <img src="../assets/image/cover 5.jpg" class="card-img-top border" alt="toilet bound">
+                            <img src="{{asset('image/cover 5.jpg')}}" class="card-img-top border" alt="toilet bound">
                           
                             <div class="card-body">
                               <h5 class="card-title">Toilet-bound hanako-kun tome 11</h5>
@@ -185,7 +186,7 @@
                     </div>
                     <div class="col">
                         <div class="card border border-1 border-dark">
-                            <img src="../assets/image/cover 6.jpg" class="card-img-top border" alt="love is war">
+                            <img src="{{asset('image/cover 6.jpg')}}" class="card-img-top border" alt="love is war">
                           
                             <div class="card-body">
                               <h5 class="card-title">Love is War tome 25</h5>
@@ -196,7 +197,7 @@
                     <!--responsive tablet-->
                     <div class="col">
                         <div class="card border border-1 border-dark">
-                            <img src="../assets/image/cover 4.jpg" class="card-img-top border" alt="hiromia">
+                            <img src="{{asset('image/cover 4.jpg')}}" class="card-img-top border" alt="hiromia">
                           
                             <div class="card-body">
                               <h5 class="card-title">Hiromia tome 8</h5><br>
@@ -207,7 +208,7 @@
                     <!--responsive pc-->
                     <div class="col">
                         <div class="card border border-1 border-dark">
-                            <img src="../assets/image/cover 5.jpg" class="card-img-top border" alt="toilet bound">
+                            <img src="{{asset('image/cover 5.jpg')}}" class="card-img-top border" alt="toilet bound">
                           
                             <div class="card-body">
                               <h5 class="card-title">Toilet-bound hanako-kun tome 11</h5>
@@ -217,7 +218,7 @@
                     </div>
                     <div class="col">
                         <div class="card border border-1 border-dark">
-                            <img src="../assets/image/cover 6.jpg" class="card-img-top border" alt="love is war">
+                            <img src="{{asset('image/cover 6.jpg')}}" class="card-img-top border" alt="love is war">
                           
                             <div class="card-body">
                               <h5 class="card-title">Love is War tome 25</h5>
@@ -241,32 +242,32 @@
                 <div class="row">
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="../assets/image/Blame.jpeg" alt="image sf">
+                            <img src="{{asset('image/Blame.jpeg')}}" alt="image sf">
                         </article>
                     </div>
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="../assets/image/japanese-fantasy-manga.jpg" alt="image fantasy">
+                            <img src="{{asset('image/japanese-fantasy-manga.jpg')}}" alt="image fantasy">
                         </article>
                     </div>
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="../assets/image/842939.jpg" alt="horreur image">
+                            <img src="{{asset('image/842939.jpg')}}" alt="horreur image">
                         </article>
                     </div>
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="../assets/image/Lovely_Loveless_Romance_illust-1.jpg" alt="image romance">
+                            <img src="{{asset('image/Lovely_Loveless_Romance_illust-1.jpg')}}" alt="image romance">
                         </article>
                     </div>
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="../assets/image/8ad0b2654d72e1ba33ded13f1dcde5fa1648007584_main.jpg" alt="image action">
+                            <img src="{{asset('image/8ad0b2654d72e1ba33ded13f1dcde5fa1648007584_main.jpg')}}" alt="image action">
                         </article>
                     </div>
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="../assets/image/811C+xGQwnL._AC_SY606_.jpg" alt="sport image">
+                            <img src="{{asset('image/811C+xGQwnL._AC_SY606_.jpg')}}" alt="sport image">
                         </article>
                     </div>
                 </div>
@@ -274,33 +275,33 @@
                     <!--responsive tablet-->
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="../assets/image/Blame.jpeg" alt="image sf">
+                            <img src="{{asset('image/Blame.jpeg')}}" alt="image sf">
                         </article>
                     </div>
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="../assets/image/japanese-fantasy-manga.jpg" alt="image fantasy">
+                            <img src="{{asset('image/japanese-fantasy-manga.jpg')}}" alt="image fantasy">
                         </article>
                     </div>
                     <!--responsive pc-->
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="../assets/image/842939.jpg" alt="horreur image">
+                            <img src="{{asset('image/842939.jpg')}}" alt="horreur image">
                         </article>
                     </div>
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="../assets/image/Lovely_Loveless_Romance_illust-1.jpg" alt="image romance">
+                            <img src="{{asset('image/Lovely_Loveless_Romance_illust-1.jpg')}}" alt="image romance">
                         </article>
                     </div>
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="../assets/image/8ad0b2654d72e1ba33ded13f1dcde5fa1648007584_main.jpg" alt="image action">
+                            <img src="{{asset('image/8ad0b2654d72e1ba33ded13f1dcde5fa1648007584_main.jpg')}}" alt="image action">
                         </article>
                     </div>
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="../assets/image/811C+xGQwnL._AC_SY606_.jpg" alt="sport image">
+                            <img src="{{asset('image/811C+xGQwnL._AC_SY606_.jpg')}}" alt="sport image">
                         </article>
                     </div>
                 </div>

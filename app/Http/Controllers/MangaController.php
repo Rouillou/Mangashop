@@ -51,7 +51,7 @@ class MangaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Manga $manga)
     {
         return new MangaResource($manga);
     }
@@ -67,7 +67,7 @@ class MangaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Manga $manga)
     {
         $manga_title = $request->input('title');
         $manga_cover = $request->input('image');
@@ -90,7 +90,7 @@ class MangaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Manga $manga)
     {
         $manga->delete();
         return response()->json(null,204);
