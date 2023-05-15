@@ -24,7 +24,7 @@
     <!-- Header --> 
     <nav class="navbar navbar-expand-lg color-orange bg-body-tertiary">
         <div class="container-fluid my-2">
-            <a class="navbar-brand fw-bold rounded-pill p-1 logo-pc" href="{{url('/index')}}">Mangashop</a>
+            <a class="navbar-brand fw-bold rounded-pill p-1 logo-pc" href="{{url('/')}}">Mangashop</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,8 +36,8 @@
                 <a class="mx-3 d-flex" href="{{url('/panier')}}">
                     <img class="panier" src="{{ asset('image/shopping-bag-black-silhouette.png')}}">
                 </a>
-                <a class="mx-3 d-flex" href="{{url('/panier')}}">
-                    <img class="profil" src="{{ asset('image\man.png')}}">
+                <a class="mx-3 d-flex" href="{{ Auth::check() ? url('/profil') : url('/formulaire') }}">
+                    <img class="profil" src="{{ asset('image/man.png') }}">
                 </a>
             </div>
         </div>

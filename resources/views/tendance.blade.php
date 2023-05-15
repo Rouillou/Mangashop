@@ -25,7 +25,7 @@
     <!-- Header --> 
     <nav class="navbar navbar-expand-lg color-orange bg-body-tertiary">
         <div class="container-fluid my-2">
-            <a class="navbar-brand fw-bold rounded-pill p-1 logo-pc" href="{{url('/index')}}">Mangashop</a>
+            <a class="navbar-brand fw-bold rounded-pill p-1 logo-pc" href="{{url('/')}}">Mangashop</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,7 +37,7 @@
                 <a class="mx-3 d-flex" href="{{url('/panier')}}">
                     <img class="panier" src="{{ asset('image/shopping-bag-black-silhouette.png')}}">
                 </a>
-                <a class="mx-3 d-flex" href="{{url('/panier')}}">
+                <a class="mx-3 d-flex" href="{{url('/formulaire')}}">
                     <img class="profil" src="{{ asset('image\man.png')}}">
                 </a>
             </div>
@@ -267,7 +267,7 @@
                     </div>
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="{{asset('image/811C+xGQwnL._AC_SY606_.jpg')}}" alt="sport image">
+                            <img src="{{asset('image/Sport.jpg')}}" alt="sport image">
                         </article>
                     </div>
                 </div>
@@ -301,7 +301,7 @@
                     </div>
                     <div class="col">
                         <article class="border border-1 border-dark">
-                            <img src="{{asset('image/811C+xGQwnL._AC_SY606_.jpg')}}" alt="sport image">
+                            <img src="{{asset('image/Sport.jpg')}}" alt="sport image">
                         </article>
                     </div>
                 </div>

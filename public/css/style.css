@@ -90,6 +90,22 @@ img {
     margin : auto 200px;
 }
 
+.categorie {
+    position : relative;
+}
+
+.img-categorie {
+    display: block;
+    object-fit: cover;
+}
+
+.text-categorie {
+    position: absolute;
+    top: 48%;
+    left: 35%;
+    text-align: center;
+}
+
 
 
 /* FOOTER */

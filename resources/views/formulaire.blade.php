@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-lg color-orange bg-body-tertiary">
       <div class="container-fluid">
         <div class="ms-3">
-          <h2><strong><u>Se connecter</u></strong></h2>
+          <h2 ><strong><u id="Titre_formulaire">Se connecter</u></strong></h2>
         </div>
       </div>
     </nav>
@@ -41,25 +41,94 @@
 
       <div class="color-blue rounded border border-dark centrer-form">
         <div class="container-fluid my-2">
-          <div><h4><strong><u>Veuillez vous connecter</u></strong></h4></div>
+          <div><h4><strong><u id="texte_formulaire">Veuillez vous connecter</u></strong></h4></div>
+          <div id="se_connecter" style="display:block">
+            <form class="mt-4" method="POST" action="{{ route('login') }}">
+              @csrf
+              <div class="mb-3">
+                <x-input-label for="email" :value="__('Email')" />
+                <x-text-input id="email" class="form-control" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+              </div>
 
-          <form class="mt-4">
-            <div class="mb-3">
-              <label for="email" class="form-label">Adresse email</label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+              <div class="mb-3">
+                <x-input-label for="password" :value="__('Password')" />
+
+                <x-text-input id="password" class="form-control"
+                                type="password"
+                                name="password"
+                                required autocomplete="current-password" />
+
+                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+              </div>
+
+              <button type="submit" class="btn btn-light" href="{{url('/')}}" >Se connecter</button>
+            </form>
+          
+            <div class="mt-3">
+              <p>Vous n'avez pas de compte ?</p>
+              <button id='creer_un_compte' class="btn btn-light"><u>Créer un compte</u></button>
             </div>
+          </div>
 
-            <div class="mb-3">
-              <label for="password" class="form-label">Mot de passe</label>
-              <input type="password" class="form-control" id="password" required>
+
+
+
+
+
+          <div id="créer_un_compte" style="display:none">
+            <form class="mt-4" method="POST" action="{{ route('register') }}">
+              @csrf
+              <div class="mb-3">
+                <x-input-label for="name" :value="__('Name')" />
+                <x-text-input id="name" class="form-control" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+              </div>
+
+              {{-- <div class="mb-3">
+                  <label for="profile_photo" class="form-label">{{ __('Profile Photo') }}</label>
+                  <input id="profile_photo" class="form-control" type="file" name="profile_photo" accept="image/*" required>
+                  @error('profile_photo')
+                    <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                    </span>
+                  @enderror
+                </div> --}}
+
+              <div class="mb-3">
+                <x-input-label for="email" :value="__('Email')" />
+                <x-text-input id="email" class="form-control" type="email" name="email" :value="old('email')" required autocomplete="username" />
+                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+              </div>
+
+              <div class="mb-3">
+                <x-input-label for="password" :value="__('Password')" />
+
+                <x-text-input id="password" class="form-control"
+                                type="password"
+                                name="password"
+                                required autocomplete="new-password" />
+
+                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+              </div>
+
+              <div class="mb-3">
+                <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+
+                <x-text-input id="password_confirmation" class="form-control"
+                                type="password"
+                                name="password_confirmation" required autocomplete="new-password" />
+
+                <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+              </div>
+
+              <button type="submit" class="btn btn-light" href="{{url('/')}}">Valider</button>
+            </form>
+          
+            <div class="mt-3">
+              <p>Vous avez déja un compte ?</p>
+              <button id='se_connecter_boutton' class="btn btn-light"><u>Se connecter</u></button>
             </div>
-
-            <button type="submit" class="btn btn-light">Se connecter</button>
-          </form>
-
-          <div class="mt-3">
-            <p>Vous n'avez pas de compte ?</p>
-            <button class="btn btn-light"><u>Créer un compte</u></button>
           </div>
         </div>
       </div>
@@ -67,5 +136,6 @@
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
   </body>
 </html>
