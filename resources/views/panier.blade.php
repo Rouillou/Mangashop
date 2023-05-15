@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
     <!--mon css-->
-    <link rel="stylesheet" href="../assets/style.css" type="text/css">
+    <link rel="stylesheet" href="{{asset('style.css')}}" type="text/css">
 
     <title>Panier mangashop</title>
 </head>
@@ -68,7 +68,7 @@
     <div class="my-4 mx-2">
         <div class="container-fluid my-2">
             <button onclick="history.go(-1);" class="btn color-orange btn-outline-dark me-2 justify-content-start" type="button">
-                <img class="retour me-2" src="../assets/image/NicePng_arrow-png-transparent_1039094.png"/>
+                <img class="retour me-2" src="{{asset('image/NicePng_arrow-png-transparent_1039094.png')}}"/>
                 <strong>Retour</strong>
             </button>
             <h1 class="mt-5 fw-bold text-decoration-underligne text-center">
