@@ -1,0 +1,108 @@
+/* RESET CSS*/
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+/* BALISE HTML */
+body {
+    font-family: 'helvetica';
+}
+#right {
+    text-align: right;
+}
+#left {
+    text-align: left;
+}
+#center {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*couleur*/
+
+.color-orange {
+    background-color: #DF6100;
+}
+
+.color-blue {
+    background-color: #008DA3;
+}
+
+.color-white {
+    background-color: white;
+}
+
+/*text*/
+
+.text-black {
+    color :black
+}
+
+.text-white {
+    color :white
+}
+
+/*FORM*/
+
+.centrer-form {
+    margin: auto 400px ;
+}
+
+/* HEADER */
+
+.logo-pc {
+    background-color: white;
+    color: black;
+}
+.logo {
+    width: 4rem;
+}
+.panier {
+    width: 3rem;
+}
+.profil {
+    width: 3rem;
+}
+
+/* NAV */
+
+/* CONTENT */
+
+.retour {
+    width : 1rem
+}
+.image-articles {
+    width : 400px auto;
+}
+
+.centrer-articles {
+    margin : auto 200px;
+}
+
+
+
+/* FOOTER */
+
+/* RESPONSIVE */
+
+@media all and (max-width : 50rem) {
+    
+}
+
+@media all and (max-width : 30rem) {
+
+}
+
+
+

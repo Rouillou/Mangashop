@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -29,3 +29,31 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/article', function () {
+    return view('article');
+});
+
+Route::get('/categorie', function () {
+    return view('categorie');
+});
+
+Route::get('/formulaire', function () {
+    return view('formulaire');
+});
+
+Route::get('/merchandising', function () {
+    return view('merchandising');
+});
+
+Route::get('/panier', function () {
+    return view('panier');
+});
+
+Route::get('/profil', function () {
+    return view('profil');
+});
+
+Route::get('/tendance', function () {
+    return view('tendance');
+});

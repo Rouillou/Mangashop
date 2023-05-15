@@ -23,3 +23,15 @@ Route::get('manga/{manga}', [MangaController::class, 'show'])->name('manga.show'
 Route::post('manga', [MangaController::class, 'store'])->name('manga.store');
 Route::put('manga/{manga}', [MangaController::class, 'update'])->name('manga.update');
 Route::delete('manga/{manga}', [MangaController::class, 'destroy'])->name('manga.destroy');
+
+Route::prefix('v1')->group(function () {
+    Route::post('login', [UserAuthenticationController::class, 'login']);
+    Route::post('register', [UserAuthenticationController::class, 'register']);
+});
+
+
+//These routes are protected using middleware
+Route::prefix('v1')->middleware('auth:sanctum')->group(function () {
+    Route::post('logout', [UserAuthenticationController::class, 'logout']);
+    Route::apiResource('products', ProductsController::class);
+});
