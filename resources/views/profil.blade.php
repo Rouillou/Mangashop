@@ -16,8 +16,10 @@
 
     <!--mon css-->
     <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
+    
 
     <title>Profil mangashop</title>
+    
 </head>
 <body>
     <!-- Header --> 
@@ -43,7 +45,18 @@
         </div>
     </div>
     <!--le profil en React-->
+
+        {{-- ReactDOM.render(
+        <Profile />,
+        document.getElementById('root')
+        );--}}
+
+
+        <div id="Profile"></div>
+        <script src="../js/components/UserProfile.js"></script>
     
+    
+
 
 
     <!--les favori-->
@@ -52,7 +65,6 @@
     </div>
 
     <!--les favori en php-->
-
 
 
     <form class="" method="POST" action="{{ route('logout') }}">
@@ -64,6 +76,5 @@
             {{ __('Log Out') }}
         </x-dropdown-link>
     </form>
-    
 </body>
 </html>

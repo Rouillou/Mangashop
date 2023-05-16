@@ -35,3 +35,7 @@ Route::prefix('v1')->middleware('auth:sanctum')->group(function () {
     Route::post('logout', [UserAuthenticationController::class, 'logout']);
     Route::apiResource('products', ProductsController::class);
 });
+
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
