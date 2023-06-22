@@ -46,18 +46,9 @@
     </div>
     <!--le profil en React-->
 
-        {{-- ReactDOM.render(
-        <Profile />,
-        document.getElementById('root')
-        );--}}
 
-
-        <div id="Profile"></div>
-        <script src="../js/components/UserProfile.js"></script>
+        {{-- @inertia --}}
     
-    
-
-
 
     <!--les favori-->
     <div class="my-4 mx-4">

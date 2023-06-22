@@ -68,3 +68,5 @@ Route::get('/profil', function () {
 Route::get('/tendance', function () {
     return view('tendance');
 });
+
+Route::get('/test', [ProfileController::class, 'index']);

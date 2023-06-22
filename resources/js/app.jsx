@@ -1,21 +1,17 @@
 import './bootstrap';
 import '../css/app.css';
+import {App} from '@inertiajs/react';
+import React from 'react';
+import {render} from 'react-dom'
 
-import { createRoot } from 'react-dom/client';
-import { createInertiaApp } from '@inertiajs/react';
-import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+const Pro = document.getElementById('profile')
 
-const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
+render(
+    <App
+        initialPage={JSON.parse(Pro.dataset.page)}
+        resolveComponent={name => require(`./Pages/${name}.jsx`).default}
+    />,
+    Pro
+)
 
-createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
-    resolve: (name) => resolvePageComponent(`./Pages/${name}.jsx`, import.meta.glob('./Pages/**/*.jsx')),
-    setup({ el, App, props }) {
-        const root = createRoot(el);
 
-        root.render(<App {...props} />);
-    },
-    progress: {
-        color: '#4B5563',
-    },
-});

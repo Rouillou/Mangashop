@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MangaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ Route::delete('manga/{manga}', [MangaController::class, 'destroy'])->name('manga
 Route::prefix('v1')->group(function () {
     Route::post('login', [UserAuthenticationController::class, 'login']);
     Route::post('register', [UserAuthenticationController::class, 'register']);
+    Route::apiResource('manga', MangaController::class);
 });
 
 
