@@ -50,15 +50,6 @@
                 <li class="nav-item pt-sm-1">
                     <a class="nav-link h6 fw-bold" href="{{ url('/tendance')}}">Tendances</a>
                 </li>
-                <li class="nav-item dropdown pt-sm-1">
-                    <a class="nav-link h6 fw-bold dropdown-toggle" href="{{ url('/merchandising')}}" data-bs-toggle="dropdown">Merchandising</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">T-shirts</a></li>
-                        <li><a class="dropdown-item" href="#">Sweat-shirts</a></li>
-                        <li><a class="dropdown-item" href="#">Posters</a></li>
-                        <li><a class="dropdown-item" href="#">Figurines</a></li>
-                    </ul>
-                </li>
             </ul>
         </div>
     </nav>

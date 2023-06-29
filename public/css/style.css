@@ -106,6 +106,15 @@ img {
     text-align: center;
 }
 
+.centrer-profil {
+    margin : auto 400px;
+}
+
+.logout-link {
+    color: black;
+    text-decoration: none;
+}
+
 
 
 /* FOOTER */
